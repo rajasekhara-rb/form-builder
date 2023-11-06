@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Categorize from './Categorize';
 
 function FormBuilder(props) {
     const [isEditing, setIsEditing] = useState({
@@ -48,8 +49,10 @@ function FormBuilder(props) {
     return (
         <>
             <div className='flex flex-cols w-100'>
-                <div className="w-1/6 px-5 py-10">Avibalbel sections</div>
-                <div className='w-4/6 px-5 py-10' >
+                <div className="w-1/6 px-5 py-10">Avibalbel sections
+              
+                </div>
+                <div className='w-4/6 px-5 py-10' style={{overflowY:"scroll"}} >
                     <div className='w-100'>
                         <img class="h-auto max-w-full" src={formData.formBanner} alt="image description" />
                         {isEditing.formName ? (
@@ -122,6 +125,8 @@ function FormBuilder(props) {
                     <hr></hr>
                     <div>
                         Form Elements
+
+                        <Categorize/>
                     </div>
 
                 </div>
